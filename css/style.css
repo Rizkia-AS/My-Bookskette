@@ -1,0 +1,417 @@
+/*CSS RESET*/
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+
+		body {line-height: 1;}
+
+		ol, ul {list-style: none;}
+
+		blockquote, q {quotes: none;}
+
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+
+		table {border-collapse: collapse;  border-spacing: 0;}
+
+
+
+
+
+/*START*/
+
+/*awal Universal css*/
+	.container {width: 80%;   margin: 0 auto ;}
+
+	h1,h2,h3,h4,h5,p {font-family: 'Quicksand', sans-serif;}
+
+	h3{color: white;  font-size: 20px;  font-weight: 500;}
+
+	.stop-scroll { overflow: hidden; }
+
+	.modal {
+		background-color: rgba(0, 0, 0, .5);
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+		justify-content: center;
+		align-items: center;
+		display: none;
+
+	}
+
+	.modal-on {display: flex;}
+
+
+
+	.cs-dialog {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		background-color: white;
+		border: 1px solid black;
+		width: 80%;
+		height: 30%;
+		padding: 2%;
+		box-sizing: border-box;
+		border-radius: 5px;
+		
+	}
+
+	.cs-dialog h3 { color: black;  margin-bottom: 10px; }
+
+	.cs-dialog div{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
+	.cs-dialog div button:nth-child(1) { background-color: lightblue; }
+
+	.cs-dialog div button {
+		width: 15%;
+		margin-right: 10px;
+		border-radius: 5px;
+		border: 1px solid black;
+		cursor: pointer;
+	}
+
+	.oke-button {display: none;}
+
+	.cancel-button {display: none;}
+
+	.button-on {display: block;}
+/*akhir Universal css*/
+
+
+
+
+
+/*awal header*/
+	.fixed-header {
+		background-color: #373737;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		padding-left: 20px;
+		margin-bottom: 40px;
+	}
+
+	.fixed-header .material-icons {
+		color: white;
+		margin-right: 10px;
+		border: 1px solid white;
+	}
+/*akhir header*/
+
+
+
+
+
+
+/*awal section up*/
+	.up { background-color: #373737;
+		width: 83%;
+		height: 231px;
+		padding: 20px 20px 30px 20px;
+		box-sizing: border-box;
+		margin: 0 auto 40px auto;
+	}
+
+	.up form {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-areas:
+		'title title saveasread' 
+		'author year submit';
+	}
+
+	form label { margin-bottom: 15px; }
+
+	form input {
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid black;
+		outline: none;
+	}
+
+	.form-background {
+		padding: 10px 20px 0 20px;
+		background-color: #EDEDED;
+		height: 100%;
+		margin:0 auto;
+	}
+
+	.form-background h3 {
+		color: black;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.title,.author,.year {transition: .3s;}
+
+	.titleform {
+		grid-area: title;
+		display: flex;
+		flex-direction: column;
+	}
+	.title { width: 99%;  border: 0, 0, 1px solid red, 0; }
+
+	.save-as-read {
+		grid-area: saveasread;
+		text-align: center;
+		align-self: flex-end;
+	}
+
+	.authorform {
+		grid-area: author;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.yearform {
+		grid-area: year;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.changeAnim { background-color: #bdffdf; }
+
+	.submit {
+		grid-area: submit;
+		align-self: flex-end;
+		border: none;
+		border-radius: 5px;
+		background-color: #646464;
+		color: white;
+		font-size: 20px;
+		height: 40px;
+	}
+/*akhir section up*/
+
+
+
+
+
+/*awal section down*/
+	.menu {
+		background-color: #373737;  
+		display: flex;
+		width: 100%;
+		height: 70px;
+		clip-path: polygon(0 0, 90% 0%, 100% 100%, 0% 100%);
+	}
+
+	.select-list {
+		background-color: white;
+		width: 30%;
+		height: 50px;
+		margin-left: 2%;
+		margin-right: 8%;
+		display: flex;
+	}
+
+	.drop-down { display: none; }
+
+	.unread {
+		background-color: #646464;
+		width: 50%;
+		text-align: center;
+		line-height: 50px;
+		border: 1px solid #2A2A2A;
+	}
+
+	.read {
+		background-color: #646464;
+		width: 50%;
+		text-align: center;
+		line-height: 50px;
+		border: 1px solid #2A2A2A;
+	}
+
+	.active {
+		background-color: #4B4B4B;
+		box-shadow: inset 5px -5px 5px #2A2A2A;
+		position: relative;
+		top: 5px;
+		height: 43px;
+	}
+
+	.searchform {
+		background-color: #646464;
+		width: 48%;
+		height: 50px;
+		margin-right: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.searchform label span {margin-top: 20px; color: white;}
+
+	.search {
+		width: 80%;
+		height: 30px;
+		background-color: #EDEDED;
+		border-radius: 5px;
+		transition: 0.2s;
+	}
+
+	.search-not-found { background-color: #ff9696; }
+
+	.bookshelf { background-color: #373737;  padding: 20px; }
+
+	.books {
+		background-color: #EDEDED;
+		display: grid;
+		padding: 10px;
+		grid-gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+	}
+
+	.book {
+		background-color: white;
+		border: 2px solid #2A2A2A;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-areas: 
+		'bookTitle bookTitle' 
+		'bookArticle bookSettings';
+	}
+
+	.book h3 {
+		grid-area: bookTitle;
+		color: black;
+		margin: 5px 0 5px 5px;
+	}
+
+	.book article {
+		grid-area: bookArticle;
+		margin-left: 20px;
+		margin-bottom: 5px;}
+
+	.book-settings {
+		margin-bottom: 5px;
+		grid-area: bookSettings;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.book-settings span { cursor: pointer; }
+/*akhir section down*/
+
+
+
+
+
+
+/*awal media query*/
+	@media screen and (max-width: 820px) {
+
+		.container { width: 90%; }
+
+		.menu {	height: 50px; }
+
+	}
+
+	@media screen and (max-width: 700px) {
+		.container { width: 100%; }
+
+		.menu {
+			align-items: center;
+			justify-content: space-between;
+			clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+		}
+
+		.select-list {display: none;}
+
+		.drop-down {
+			background-color: #373737;
+			color: white;
+			border: none;
+			font-size: 20px;
+			display: block;
+			margin-left: 10%;
+			width: 100px;
+			height: 30px;
+		}
+
+		.searchform {
+			width: 80%;
+			margin-right: 0px;
+			margin-left: 5%;
+		}
+
+		.bookshelf {padding-top: 10px;}
+	}
+
+	@media screen and (max-width: 650px) {
+		.cs-dialog { padding: 3%; }
+
+		.cs-dialog div { margin-right: 10px;  margin-bottom: 10px; }
+
+		.cs-dialog h3 { color: black;  margin-bottom: 5px; }
+
+		.cs-dialog div button { width: 30%; }
+
+		.up {padding: 0 0 0 0;  background-color: transparent;}
+
+		.form-background { border: 2px solid #373737; }
+
+		.up form {
+			grid-template-areas:
+			'title title saveasread' 
+			'author author year ' 
+			'submit submit submit';
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.up { width: 95%; }
+
+		.drop-down { width: 90px;}
+
+		.searchform .material-icons { display: none; }
+
+		.search { width: 90%; }
+
+		.books { grid-template-columns: repeat(auto-fit, minmax(262px, 1fr)); }
+
+		.bookshelf { padding-top: 5px; }
+	}
+/*akhir media query*/

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My bookskette</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<div class="container">
+
+	<div class="modal">
+		<div class="cs-dialog">
+			<h3>Alert !</h3>
+			<p>Book will deleted</p>
+			<div>
+				<button class="ok-button">Ok</button>
+			</div>
+		</div>
+	</div>
+
+
+	<header>
+		<div class="fixed-header">
+			<span class="material-icons">save</span>
+			<h3>My bookskette</h3>
+		</div>
+	</header>
+
+
+	<main>
+		<section class="up">
+			<div class="form-background">
+				<h3>Register book</h3>
+				<form>
+					<div class="titleform">
+						<label for="title">Title :</label>
+						<input type="text" name="title" class="title" required="">
+					</div>
+					<div class="save-as-read">
+						<label for="isComplete">Save as read</label>
+						<input type="checkbox" name="isComplete" class="isComplete">
+					</div>
+					<div class="authorform">
+						<label for="author">Author :</label>
+						<input type="text" name="author" class="author" required="">
+					</div>
+					<div class="yearform">
+						<label for="year">Year :</label>
+						<input type="number" name="year" class="year" required="">
+					</div>
+					<input type="submit" value="Submit" class="submit" class="submitform">
+					
+				</form>
+			</div>
+		</section>
+
+		<section class="down">
+
+			<div class="menu">
+				<div class="select-list">
+					<div class="unread">
+						<h3>Unread</h3>
+					</div>
+					<div class="read">
+						<h3>Read</h3>
+					</div>
+				</div>
+
+				<form>
+					<select class="drop-down">
+						<option value="unread">Unread</option>
+						<option value="read">Read</option>
+					</select>
+				</form>
+
+				<form class="searchform">
+					<label for="search"><span class="material-icons">search</span></label>
+					<input type="text" name="search" placeholder="Search book" class="search">
+				</form>
+			</div>
+
+
+			<div class="bookshelf">
+
+				<div class="books">
+
+
+
+				</div>
+
+			</div>
+		</section>
+	</main>
+</div>
+
+
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
